@@ -1,0 +1,53 @@
+﻿<Window x:Class="Ivz_DE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ivz_DE"
+        mc:Ignorable="d"
+        Title="Авторизация" MinHeight="300" MinWidth="600" SizeToContent="WidthAndHeight">
+
+    <Window.Background>
+        <SolidColorBrush Color="#D3D3D3"/>
+    </Window.Background>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Авторизация"
+               FontSize="24"
+               FontWeight="Bold"
+               Foreground="#333"
+               HorizontalAlignment="Center"
+               Margin="0,10"
+               FontFamily="Bahnschrift"/>
+
+        <TextBlock Text="Логин:" FontWeight="Bold" FontSize="24" Foreground="#444" Margin="31,54,-31,131" Grid.Row="1"/>
+        <TextBox x:Name="txtUsername"
+                 Height="35"
+                 Background="#FFFF"
+                 BorderBrush="#CCC"
+                 BorderThickness="1" Margin="152,58,38,142" Grid.Row="1"/>
+        <TextBlock Text="Пароль:" FontWeight="Bold" FontSize="24" Foreground="#444" Margin="31,118,-31,68" Grid.Row="1"/>
+        <TextBox x:Name="txtPassword"
+                Margin="152,118,38,82"
+                Height="35"
+                Background="#FFFF"
+                BorderBrush="#CCC"
+                BorderThickness="1" Grid.Row="1"/>
+
+        <Button Content="Войти"
+                Width="106"
+                Background="#89AC76"
+                Foreground="#333"
+                FontWeight="Bold"
+                HorizontalAlignment="Left"
+                Cursor="Hand"
+                Margin="152,172,0,26"
+                BorderThickness="0"
+                Click="BtnLogin_Click" Grid.Row="1"/>
+    </Grid>
+</Window>
